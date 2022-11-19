@@ -9,7 +9,7 @@ app.use(cors());
 // parse application/json
 app.use(bodyParser.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 4000;
 
 app.post("/calculate/add", (req, res) => {
   console.log(req.body);
